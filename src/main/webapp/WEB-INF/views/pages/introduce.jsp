@@ -7,7 +7,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-7">
 				<h3>Send email</h3>
-				<form action="/ejhjhjh" method="post">
+				<form action="/sendEmail" method="post">
 					<div class="form-group">
 						<label>To</label> <input type="text" name="email"
 							class="form-control" />

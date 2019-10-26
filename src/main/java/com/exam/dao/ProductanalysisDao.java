@@ -74,7 +74,7 @@ public class ProductanalysisDao {
 	
 	
 	
-	public List<Productanalysis> filterByDate(String firstDate, String lastDate) {
+	public List<Productanalysis> filterByDate(String firstDate, String lastDate, String selectValue) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		
 		Date startDate = null;
@@ -89,7 +89,7 @@ public class ProductanalysisDao {
 			e.printStackTrace();
 		}
 		Query query = sessionFactory.getCurrentSession().createQuery("FROM Productanalysis where luxShop=:luxShop and createdDate BETWEEN :firstDate and :lastDate");
-		query.setParameter("luxShop", "Yes");
+		query.setParameter("luxShop", selectValue);
 		query.setParameter("firstDate", startDate);
 		query.setParameter("lastDate", endDate);
 		List<Productanalysis> list = query.list();

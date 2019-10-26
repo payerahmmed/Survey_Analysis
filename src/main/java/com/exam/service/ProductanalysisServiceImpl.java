@@ -39,8 +39,8 @@ public class ProductanalysisServiceImpl {
 		return productanalysisDao.delete(id);
 	}
 	
-	public List<Productanalysis> filterByDate(String firstDate, String lastDate) {		
-		return productanalysisDao.filterByDate(firstDate, lastDate);
+	public List<Productanalysis> filterByDate(String firstDate, String lastDate, String selectValue) {		
+		return productanalysisDao.filterByDate(firstDate, lastDate, selectValue);
 	}
 	
 }

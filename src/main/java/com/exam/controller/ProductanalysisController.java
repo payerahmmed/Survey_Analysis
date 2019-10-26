@@ -171,7 +171,7 @@ public class ProductanalysisController {
 			model.put("userList", entityList);
 			return new ModelAndView("pages/show-productanalysis", model);
 		}		System.err.println(firstDate+":::::::::::::::::"+lastDate);
-		List<Productanalysis> entityList = productanalysisServiceImpl.filterByDate(firstDate, lastDate);
+		List<Productanalysis> entityList = productanalysisServiceImpl.filterByDate(firstDate, lastDate, selectValue);
 		model.put("userList", entityList);
 		return new ModelAndView("pages/show-productanalysis", model);
 	}
