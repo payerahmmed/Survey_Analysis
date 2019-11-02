@@ -67,6 +67,12 @@
               <p>Send Email</p>
             </a>
           </li>
+          <li>
+            <a href="/employeereg">
+              <i class="nc-icon nc-circle-10"></i>
+              <p>Employee Registration</p>
+            </a>
+          </li>
            <li>
             <a href="/show-registartion">
               <i class="nc-icon nc-circle-10"></i>

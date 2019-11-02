@@ -3,7 +3,7 @@
 <!doctype html>
 <html>
 <head>
-<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
 	<div class="container">
