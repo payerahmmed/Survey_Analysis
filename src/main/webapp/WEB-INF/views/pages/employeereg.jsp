@@ -7,7 +7,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-10">
 				<h3>Employee Registration From</h3>
-				<form action="/employeeReg" method="post">
+				<form action="/employeereg" method="post">
 					<div class="form-row ">
 						<div class="form-group col-md-5">
 							<label for="ename">Name : </label> 

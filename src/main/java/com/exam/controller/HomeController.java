@@ -29,6 +29,10 @@ public class HomeController {
 	public ModelAndView introduce() {
 		return new ModelAndView("pages/introduce");
 	}
+	@GetMapping(value = "/empreg")
+	public ModelAndView empRegr() {
+		return new ModelAndView("pages/employeereg");
+	}
 	
 	
 }

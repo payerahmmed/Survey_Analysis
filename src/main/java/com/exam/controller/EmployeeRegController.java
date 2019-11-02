@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -16,7 +17,7 @@ public class EmployeeRegController {
 	@Autowired
 	EmployeeRegServiceImpl employeeRegServiceImpl;
 
-	@PostMapping("/employeeReg")
+	@PostMapping("/employeereg")
 	public ModelAndView employeeRegistration(HttpServletRequest request) {
 
 		String ename = request.getParameter("ename");
@@ -42,6 +43,8 @@ public class EmployeeRegController {
 		employeeReg.setEage(Integer.parseInt(eage));
 		employeeReg.setEcontact(Integer.parseInt(econtact));
 		employeeReg.setAddress(address);
+		
+		employeeRegServiceImpl.save(employeeReg);
 		return new ModelAndView("pages/employeereg");
 	}
 }
