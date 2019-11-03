@@ -75,6 +75,18 @@
               <p>Employee Registration</p>
             </a>
           </li>
+          <li>
+            <a href="/empsubmit">
+              <i class="nc-icon nc-circle-10"></i>
+              <p>From Submit number</p>
+            </a>
+          </li>
+          <li>
+            <a href="/empsalary">
+              <i class="nc-icon nc-circle-10"></i>
+              <p>Employee Salary</p>
+            </a>
+          </li>
            <li>
             <a href="/show-registartion">
               <i class="nc-icon nc-circle-10"></i>

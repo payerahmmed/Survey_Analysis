@@ -20,9 +20,9 @@ public class RegistrationServiceImpl {
 	RegistrationDao registrationDao;
 	
 	public Registration save(Registration entity) {
+		
 		return registrationDao.save(entity);
-	}
-	
+	}	
 	
 	
 	public Registration getById(long id) {
