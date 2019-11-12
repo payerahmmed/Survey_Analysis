@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4">
-				<form action="/filterByDate" method="post">
+				<form action="<c:url value="/filterByDate"/>" method="post">
 					<div class="form-group">
 						<label for="fDate">First Date:</label> <input type="date"
 							id="fDate" class="form-control" name="firstDate" />
@@ -47,10 +47,11 @@
 							<td>Profession</td>
 							<td>UseLuxSoap</td>
 							<td>How Often</td>
-							<td>Flavor</td>
+							
 							<td>Flavor Use</td>
 							<td>Not Flavor</td>
 							<td>Know Size</td>
+							<td>Flavor</td>
 							<td>Lux size</td>
 							<td>KnowPrice</td>
 							<td>AboutPrice</td>
@@ -93,10 +94,10 @@
 								<td>${user.whyU}</td>
 								<td>${user.always}</td>
 								<td><a class="btn btn-success"
-									href="/productanalysis/edit/${user.id}"><i
+									href="<c:url value="/productanalysis/edit/${user.id}"/>"><i
 										class="fa fa-edit"></i></a></td>
 								<td><a class="btn btn-danger"
-									href="/productanalysis/delete/${user.id}"><i
+									href="<c:url value="/productanalysis/delete/${user.id}"/>"><i
 										class="fa fa-trash"></i></a></td>
 							</tr>
 						</c:forEach>

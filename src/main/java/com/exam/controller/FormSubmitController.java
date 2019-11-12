@@ -1,5 +1,8 @@
 package com.exam.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +21,7 @@ public class FormSubmitController {
 	
 	@PostMapping("/formsubmit")
 	public ModelAndView formSubmitnumber(HttpServletRequest request) {
+		Map<String, Object> model = new HashMap<>();
 		String empName = request.getParameter("submitid");
 		String selectValue = request.getParameter("selectValue");
 		String submitnum = request.getParameter("submitnum");
@@ -28,6 +32,6 @@ public class FormSubmitController {
 		formSubmit.setSubmitnum(Integer.parseInt(submitnum));
 		
 		formSubmitServiceImpl.save(formSubmit);
-		return new ModelAndView("pages/empformsubmit");
+		return new ModelAndView("pages/empformsubmit", model);
 	}
 }

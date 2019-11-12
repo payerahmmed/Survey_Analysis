@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <jsp:include page="../layout/header.jsp" />
 <div class="content">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7">
-				<h3>Registration From</h3>
-				<form action="/userRegistration" method="post">
+				<h3>User Registration From</h3>
+				<form action="<c:url value="/userRegistration"/>" method="post">
 					<div class="form-group">
 						<label for="name">User name : </label> <input type="text"
 							id="name" name="name" placeholder="Enter your name"

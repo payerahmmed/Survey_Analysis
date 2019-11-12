@@ -9,23 +9,18 @@ import javax.persistence.Id;
 public class EmployeeSalary {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	private long search;
-	
+	private long id;	
 	private String eName;
 	private String eEmail;
 	private String eaddress;
-	private int eBasicSalary;
-	private int eExtra;
+	private double eBasicSalary;
+	private int eExtrafromFee;
 	private int eTrans;
 	private int eLunch;
 	private int eOthers;
-	public long getSearch() {
-		return search;
-	}
-	public void setSearch(long search) {
-		this.search = search;
-	}
+	private double totalSalary;
+	
+	
 	public long getId() {
 		return id;
 	}
@@ -50,17 +45,25 @@ public class EmployeeSalary {
 	public void setEaddress(String eaddress) {
 		this.eaddress = eaddress;
 	}
-	public int geteBasicSalary() {
+	
+	public int geteExtrafromFee() {
+		return eExtrafromFee;
+	}
+	public void seteExtrafromFee(int eExtrafromFee) {
+		this.eExtrafromFee = eExtrafromFee;
+	}
+	
+	public double geteBasicSalary() {
 		return eBasicSalary;
 	}
-	public void seteBasicSalary(int eBasicSalary) {
+	public void seteBasicSalary(double eBasicSalary) {
 		this.eBasicSalary = eBasicSalary;
 	}
-	public int geteExtra() {
-		return eExtra;
+	public double getTotalSalary() {
+		return totalSalary;
 	}
-	public void seteExtra(int eExtra) {
-		this.eExtra = eExtra;
+	public void setTotalSalary(double totalSalary) {
+		this.totalSalary = totalSalary;
 	}
 	public int geteTrans() {
 		return eTrans;
@@ -82,10 +85,12 @@ public class EmployeeSalary {
 	}
 	@Override
 	public String toString() {
-		return "EmployeeSalary [search=" + search + ", id=" + id + ", eName=" + eName + ", eEmail=" + eEmail
-				+ ", eaddress=" + eaddress + ", eBasicSalary=" + eBasicSalary + ", eExtra=" + eExtra + ", eTrans="
-				+ eTrans + ", eLunch=" + eLunch + ", eOthers=" + eOthers + "]";
+		return "EmployeeSalary [id=" + id + ", eName=" + eName + ", eEmail=" + eEmail + ", eaddress=" + eaddress
+				+ ", eBasicSalary=" + eBasicSalary + ", eExtrafromFee=" + eExtrafromFee + ", eTrans=" + eTrans
+				+ ", eLunch=" + eLunch + ", eOthers=" + eOthers + ", totalSalary=" + totalSalary + "]";
 	}
+	
+	
 	
 	
 }

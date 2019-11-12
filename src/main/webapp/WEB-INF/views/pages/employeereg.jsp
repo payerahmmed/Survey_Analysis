@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="../layout/header.jsp" />
 
 <div class="content">
@@ -7,7 +8,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-10">
 				<h3>Employee Registration From</h3>
-				<form action="/employeereg" method="post">
+				<form action="<c:url value="/employeereg"/>" method="post">
 					<div class="form-row ">
 						<div class="form-group col-md-5">
 							<label for="ename">Name : </label> 
@@ -55,17 +56,22 @@
 							<input id="econtact" type="number" name="econtact" placeholder="Enter your contact number" class="form-control" />
 						</div>
 						<div class="form-group col-md-5">
+							<label for="econtact">Salary : </label> 
+							<input id="econtact" type="number" name="salary" placeholder="Enter your salary" class="form-control" />
+						</div>	
+						</div>	
+					<div class="form-row ">				
+						<div class="form-group col-md-6" >
 							<label for="eaddress">Address : </label> 
-							<textarea id="eaddress" placeholder="Enter your address"	name="eaddress" class="form-control"></textarea>
-						</div>					
+							<textarea id="eaddress" placeholder="Enter your address"	name="address" class="form-control"></textarea>
+						</div>
 					</div>
-					<div class="form-group">
-						<input type="submit" value="Save" class="btn btn-success" />
-					</div>
+					<input type="submit" value="Save" class="btn btn-success" />
 				</form>
-			</div>
+			</div>	
 		</div>
 	</div>
 </div>
+
 
 <jsp:include page="../layout/footer.jsp" />

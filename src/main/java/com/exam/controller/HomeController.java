@@ -41,6 +41,11 @@ public class HomeController {
 	public ModelAndView introduce() {
 		return new ModelAndView("pages/introduce");
 	}
+	@GetMapping(value = "/show-productanly")
+	public ModelAndView shoeproduct() {
+		
+		return new ModelAndView("pages/show-productanalysis");
+	}
 	@GetMapping(value = "/empreg")
 	public ModelAndView empRegr() {
 		return new ModelAndView("pages/employeereg");
@@ -58,5 +63,11 @@ public class HomeController {
         model.put("employee", employeeList);
 		return new ModelAndView("pages/empformsubmit",model);
 	}
+	
+	@GetMapping(value = "/reportshow")
+	public ModelAndView reportshow() {
+		return new ModelAndView("pages/reportshow");
+	}
+	
 	
 }

@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="../layout/header.jsp" />
 
 <div class="content">
 	<div class="row justify-content-center">
 		<div class="col-md-10">
 			<h3>Customer Survey</h3>
-			<form action="/productAnalysis" method="post">
+			<form action="<c:url value="/productAnalysis"/>" method="post">
 
 				<div class="form-row ">
 					<div class="form-group col-md-5">
@@ -115,9 +116,9 @@
 				<div class="form-row ">
 					<div class="form-group col-md-5">
 						<label>How satisfied are others in the family using it? </label><br />
-						<input type="checkbox" value="Satisfied[]" name="satisfied" /> Satisfied
-						 <input type="checkbox" value="Not satisfied[]" name="satisfied" /> Not satisfied 
-						 <input type="checkbox"	value="Low satisfied[]" name="satisfied" /> Low satisfied
+						<input type="checkbox" value="Satisfied[]" name="satisfied[]" /> Satisfied
+						 <input type="checkbox" value="Not satisfied[]" name="satisfied[]" /> Not satisfied 
+						 <input type="checkbox"	value="Low satisfied[]" name="satisfied[]" /> Low satisfied
 					</div>
 
 					<div class="form-group col-md-5">

@@ -64,5 +64,18 @@ public class FormSubmitDao {
 			return false;
 		}
 	}
-	
+	public List<FormSubmit> getAllbyName(String emName,String selectValue) {
+
+		try {
+			
+			List<FormSubmit> entityList = (List<FormSubmit>) sessionFactory.getCurrentSession().createQuery("FROM FormSubmit where emName=:emName and selectValue=:selectValue")
+					.setParameter("emName", emName)
+					.setParameter("selectValue", selectValue).list();
+			
+			return entityList;
+		} catch (HibernateException e) {
+			return null;
+		}
+		
+	}
 }

@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10">
-			<form action="/formsubmit" method="post">
+			<form action="<c:url value="/formsubmit"/>" method="post">
 					<div class="form-group col-md-5">
 						<label>Employee Id</label> 
 						<select name="submitid" class="form-control">

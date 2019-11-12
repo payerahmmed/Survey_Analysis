@@ -21,7 +21,7 @@ public class EmployeeReg {
 	private int eage;
 	private int econtact;
 	private String address;
-	
+	private double salary;
 	
 	public long getId() {
 		return id;
@@ -88,6 +88,13 @@ public class EmployeeReg {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
 	@Override
 	public String toString() {

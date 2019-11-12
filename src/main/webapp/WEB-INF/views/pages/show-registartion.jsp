@@ -5,7 +5,7 @@
 
 <div class="content">
 	<div class="container">
-		<div class="row justify-content-center">
+		<div class="row ">
 			<div class="col-md-10">
 				<table class="table table-bordered table-dark table-hover">
 					<thead>
@@ -38,10 +38,10 @@
 								<td>${user.age}</td>
 								<td>${user.address}</td>
 								<td>
-								<a class="btn btn-success" href="/registration/edit/${user.id}"><i class="fa fa-edit"></i></a>
+								<a class="btn btn-success" href="<c:url value="/registration/edit/${user.id}"/>"><i class="fa fa-edit"></i></a>
 								</td>
 								<td>
-								<a class="btn btn-danger" href="/registration/delete/${user.id}"><i class="fa fa-trash"></i></a>
+								<a class="btn btn-danger" href="<c:url value="/registration/delete/${user.id}"/>"><i class="fa fa-trash"></i></a>
 								</td>
 							</tr>
 						</c:forEach>

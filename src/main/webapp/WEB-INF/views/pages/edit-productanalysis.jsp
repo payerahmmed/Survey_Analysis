@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="../layout/header.jsp" />
 
 <div class="content">
 	<div class="row justify-content-center">
 		<div class="col-md-10">
 			<h3>Update Customer Survey</h3>
-			<form action="/productAnalysisUpdate" method="post">
+			<form action="<c:url value="/productAnalysisUpdate"/>" method="post">
 
 				<div class="form-row ">
 					<div class="form-group col-md-5">

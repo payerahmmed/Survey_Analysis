@@ -8,7 +8,7 @@
 		<div class="row justify-content-center">
 			<div class="col-md-7">
 				<h3>Registration Update From</h3>
-				<form action="/userupdate" method="post">
+				<form action="<c:url value="/userupdate"/>" method="post">
 					<div class="form-group">
 						<label for="name">User name : </label> <input type="text"
 							id="name" name="name" class="form-control"

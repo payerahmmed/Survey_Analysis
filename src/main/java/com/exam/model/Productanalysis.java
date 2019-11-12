@@ -130,18 +130,15 @@ public class Productanalysis {
 	public void setAboutPrice(String[] aboutPrice) {
 		this.aboutPrice = aboutPrice;
 	}
-	public String getThinkprice() {
-		return thinkprice;
-	}
-	public void setThinkprice(String thinkprice) {
-		this.thinkprice = thinkprice;
-	}
+	
 	public String getFamilyUse() {
 		return familyUse;
 	}
 	public void setFamilyUse(String familyUse) {
 		this.familyUse = familyUse;
 	}
+
+
 	public String[] getSatisfied() {
 		return satisfied;
 	}
@@ -193,6 +190,12 @@ public class Productanalysis {
 	public void setSelectValue(String selectValue) {
 		this.selectValue = selectValue;
 	}
+	public String getThinkprice() {
+		return thinkprice;
+	}
+	public void setThinkprice(String thinkprice) {
+		this.thinkprice = thinkprice;
+	}
 	@Override
 	public String toString() {
 		return "Productanalysis [id=" + id + ", name=" + name + ", gender=" + gender + ", age=" + age + ", profession="
@@ -204,6 +207,7 @@ public class Productanalysis {
 				+ Arrays.toString(whereSee) + ", likeUse=" + likeUse + ", whyU=" + whyU + ", always=" + always
 				+ ", createdDate=" + createdDate + ", selectValue=" + selectValue + "]";
 	}
+	
 	
 	
 	

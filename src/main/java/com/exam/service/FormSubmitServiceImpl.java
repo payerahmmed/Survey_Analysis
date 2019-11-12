@@ -37,4 +37,7 @@ public class FormSubmitServiceImpl {
 	public boolean delete(long id) {
 		return formSubmitDao.delete(id);
 	}
+	public List<FormSubmit> getAllbyName(String emName,String selectValue) {
+		return formSubmitDao.getAllbyName(emName,selectValue);
+	}
 }
